@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url('https://wallpaperaccess.com/full/3308628.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.main {
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100vh;
+    text-align: auto;
+}
+
+.main-container {
+    padding-top: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main h1 {
+    font-size: 60px;
+}
+
+.main h2 {
+    font-size:75px;
+}
+
+.border-line {
+    height: 2px;
+    width: 250px;
+    margin-top: 10px;
+    background-color: rgb(125, 122, 152);
+}
+
+.selection-container {
+    text-align: flex;
+    border: 1px solid;
+    border-radius: 20px;
+    width: 600px;
+    padding: 50px;
+    margin-top: 120px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+.user-selection-button button {
+    margin: 20px 10px 0 10px;
+    padding: 7px;
+    border: none;
+    border-radius: 10px;    
+    width: 200px;
+}
+
+.user-selection-button button:hover {
+    background-color: rgb(90, 90, 90);
+    color: rgb(255, 255, 255);
+}
+
+.nav-pills .nav-link {
+    color: rgb(190, 190, 190);
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: rgb(255, 255, 255);
+    background-color: transparent !important;
+    text-align: center;
+}
+
+#pills-home {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid;
+    border-radius: 20px;
+    padding: 40px;
+    margin: 100px;
+}
+
+.quiz-area {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid;
+    border-radius: 20px;
+    padding: 50px;
+    margin: 100px;
+}
+
+#add-quiz-button {
+    float: right !important;
+    margin: 10px;
+}
+
+.quiz-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quiz {
+    width: 1000px;
+    height: 600px;
+    margin-top: 90px;
+    border: 2px solid;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+}
+
+.nav-tabs .nav-link {
+    color: rgb(255, 255, 255) !important;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #495057 !important;
+}
+
+.table-area {
+    height: 450px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.take-quiz-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.take-quiz-area h3 {
+    font-size: 50px;
+}
+
+.questions {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    border: 2px solid;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    width: 700px;
+    height: 670px;
+    text-align: left;
+    overflow-y: auto;
+}
+
+#takeQuiz {
+    font-size: 16px;
+    width: 150px;
+    height: 40px;
+    margin-top: 20px;
+    border: none;
+    color: rgb(70, 70, 70);
+    background-color: rgb(210, 210, 210);
+    border-radius: 5px;
+
+}
+
+#takeQuiz:hover {
+    background-color: rgb(80, 80, 80);
+    color: rgb(255, 255, 255);
+}
+
+.question {
+    margin: 20px 50px 20px 50px;
+}
+
+.question p {
+    font-size: 20px;
+}
+
+.choices li {
+    list-style-type: upper-alpha;
+    margin-left: 100px;
+    font-size: 15px;
+}
+
+#submitAnswer {
+    margin-left: 500px;
+    margin-top: 10px;
+    width: 150px;
+}
+/* /mnt/data/online_lab_exam/online_lab_exam/assets/style.css */
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #444;
+    text-align: center;
+}
+
+a {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+td a {
+    margin-right: 10px;
+    color: #007bff;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
