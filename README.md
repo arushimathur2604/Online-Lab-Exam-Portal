@@ -23,7 +23,7 @@ Disadvantages of Existing System
 ●Inconsistent Grading: Subjectivity in manual grading can lead to inconsistencies and unfair evaluations.
 ●Security Risks: Physical exam papers can be lost, damaged, or tampered with, compromising the integrity of the examination process.
 Proposed System
-The proposed "Online Lab Exam" system addresses these challenges by providing a comprehensive digital platform for conducting lab exams. The key features of the proposed system include:
+The proposed "Online Lab Exam" system addresses these challenges by providing a comprehensive digital platform for conducting lab exams. The key features of the proposed system include:<br>
 ●Automated Exam Distribution: Exams are distributed digitally, eliminating the need for physical papers.
 ●Secure Data Storage: Exam data is securely stored in a centralized database, ensuring integrity and accessibility.
 ●Automated Grading: The system includes tools for automated grading, ensuring consistent and accurate evaluation.
