@@ -29,7 +29,7 @@ The proposed "Online Lab Exam" system addresses these challenges by providing a 
 ●Automated Grading: The system includes tools for automated grading, ensuring consistent and accurate evaluation.
 ●User-Friendly Interface: Both students and instructors can interact with the system through a simple and intuitive interface.
 ●Real-Time Monitoring: Instructors can monitor the progress of exams in real-time, providing immediate support if needed.
-Advantages of Proposed System
+Advantages of Proposed System:
 ●Efficiency: Automating the exam process saves time and reduces the administrative burden on instructors.
 ●Accuracy: Automated grading ensures that evaluations are consistent and free from human error.
 ●Convenience: Digital distribution and collection of exams simplify logistics and reduce the risk of loss or damage.
