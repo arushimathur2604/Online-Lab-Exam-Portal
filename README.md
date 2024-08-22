@@ -1,6 +1,6 @@
 # Online lab exam portal
 
-The "Online Lab Exam" project aims to revolutionize the traditional lab examination system by digitizing the entire process. This project leverages modern technology to provide a seamless and efficient method for conducting lab exams, ensuring accuracy, security, and ease of use for both students and instructors. The proposed system addresses the shortcomings of the conventional methods, offering a robust solution that enhances the overall examination experience. The document provides an in-depth analysis of the current problems, objectives of the project, the proposed solution, and its advantages. Detailed technical specifications, implementation strategies, and future scope are also discussed.
+The "Online Lab Exam" project aims to revolutionize the traditional lab examination system by digitizing the entire process. This project leverages modern technology to provide a seamless and efficient method for conducting lab exams, ensuring accuracy, security, and ease of use for both students and instructors. The proposed system addresses the shortcomings of the conventional methods, offering a robust solution that enhances the overall examination experience. The document provides an in-depth analysis of the current problems, objectives of the project, the proposed solution, and its advantages. Detailed technical specifications, implementation strategies, and future scope are also discussed.<br>
 Introduction:<br>
 The traditional lab examination system has several inherent challenges, including manual processes, errors in evaluation, and logistical issues. With the rapid advancement in technology, there is a need to transform these processes to improve efficiency and accuracy. The "Online Lab Exam" project is designed to address these challenges by providing a comprehensive digital platform for conducting lab exams.<br>
 This project is significant because it simplifies the examination process, reduces the risk of human error, and ensures that the evaluation is fair and consistent. By automating various aspects of the examination process, the proposed system not only saves time but also enhances the overall experience for students and instructors.
@@ -136,83 +136,84 @@ In this section, include the most critical parts of your codebase along with exp
 User Authentication (Node.js Example)<br>
 javascript<br>
 Copy code:<br>
-const express = require('express');
-const jwt = require('jsonwebtoken');
-const bcrypt = require('bcryptjs');
-const User = require('./models/User'); // Assume User is a Mongoose model
+const express = require('express');<br>
+const jwt = require('jsonwebtoken');<br>
+const bcrypt = require('bcryptjs');<br>
+const User = require('./models/User'); // Assume User is a Mongoose model<br><br>
 
-const app = express();
-app.use(express.json());
+const app = express();<br>
+app.use(express.json());<br><br>
 
-app.post('/register', async (req, res) => {
-    const { username, password } = req.body;
-    const hashedPassword = await bcrypt.hash(password, 10);
-    const user = new User({ username, password: hashedPassword });
-    await user.save();
-    res.status(201).send('User registered');
-});
+app.post('/register', async (req, res) => {<br>
+    const { username, password } = req.body;<br>
+    const hashedPassword = await bcrypt.hash(password, 10);<br>
+    const user = new User({ username, password: hashedPassword });<br>
+    await user.save();<br>
+    res.status(201).send('User registered');<br>
+});<br><br>
 
-app.post('/login', async (req, res) => {
-    const { username, password } = req.body;
-    const user = await User.findOne({ username });
-    if (!user || !await bcrypt.compare(password, user.password)) {
-        return res.status(401).send('Invalid credentials');
-    }
-    const token = jwt.sign({ userId: user._id }, 'your_jwt_secret');
-    res.json({ token });
-});
+app.post('/login', async (req, res) => {<br>
+    const { username, password } = req.body;<br>
+    const user = await User.findOne({ username });<br>
+    if (!user || !await bcrypt.compare(password, user.password)) {<br>
+        return res.status(401).send('Invalid credentials');<br>
+    }<br>
+    const token = jwt.sign({ userId: user._id }, 'your_jwt_secret');<br>
+    res.json({ token });<br>
+});<br>
 
-app.listen(3000, () => console.log('Server running on port 3000'));
-Automated Grading (Python Example)
-python
-Copy code
-def grade_submission(answer, correct_answer):
-    if answer.strip().lower() == correct_answer.strip().lower():
-        return True
-    return False
+app.listen(3000, () => console.log('Server running on port 3000'));<br>
+Automated Grading (Python Example)<br>
+python<br>
+Copy code<br>
+def grade_submission(answer, correct_answer):<br>
+    if answer.strip().lower() == correct_answer.strip().lower():<br>
+        return True<br>
+    return False<br><br>
 
-submissions = [
-    {'student_id': 1, 'answer': 'Answer 1'},
-    {'student_id': 2, 'answer': 'Answer 2'},
-]
+submissions = [<br>
+    {'student_id': 1, 'answer': 'Answer 1'},<br>
+    {'student_id': 2, 'answer': 'Answer 2'},<br>
+]<br><br>
 
-correct_answers = ['Answer 1', 'Answer 2']
+correct_answers = ['Answer 1', 'Answer 2']<br><br>
 
-results = []
+results = []<br><br>
 
-for submission in submissions:
-    result = {
-        'student_id': submission['student_id'],
-        'is_correct': grade_submission(submission['answer'], correct_answers[submission['student_id'] - 1])
-    }
-    results.append(result)
+for submission in submissions:<br>
+    result = {<br>
+        'student_id': submission['student_id'],<br>
+        'is_correct': grade_submission(submission['answer'], correct_answers[submission['student_id'] - 1])<br>
+    }<br>
+    results.append(result)<br><br>
 
-print(results)
-Include screenshots of your application interface, database schema, and other relevant visuals in this section.
-Result
-The "Online Lab Exam" system was tested with a group of students and instructors to evaluate its performance. The results demonstrated significant improvements in efficiency and accuracy compared to the traditional system. Key findings include:
-●Time Savings: Automated processes reduced the overall time required for exam management and grading by 50%.
-●Accuracy: Automated grading ensured consistent and accurate evaluation, reducing grading errors by 90%.
-●User Satisfaction: Both students and instructors reported high levels of satisfaction with the user-friendly interface and overall system performance.
-Output
-The output of the "Online Lab Exam" system includes:
-●Student Submissions: Securely stored in the database and accessible by instructors.
-●Grading Results: Automatically generated and displayed in the system interface.
-●Reports: Detailed reports on student performance, exam statistics, and system usage.
-Conclusion
-The "Online Lab Exam" project successfully addresses the challenges of traditional lab examinations by providing a comprehensive digital solution. The system enhances efficiency, accuracy, and user experience, making the examination process smoother and more reliable. With its robust design and advanced features, the "Online Lab Exam" system is a valuable tool for educational institutions.
-Future Scope
-Future enhancements for the "Online Lab Exam" system could include:
-●Enhanced Security Features: Implementing biometric authentication and advanced encryption methods.
-●Integration with Learning Management Systems (LMS): Seamless integration with popular LMS platforms for streamlined management.
-●Advanced Analytics: Providing deeper insights into student performance and exam trends using machine learning.
-●Mobile Application: Developing a mobile app to increase accessibility and convenience for users.
-References
-Include all sources, tools, and libraries used in the project.
-●Documentation for Express.js: https://expressjs.com/
-●Mongoose Documentation: https://mongoosejs.com/
-●Node.js Documentation: https://nodejs.org/en/docs/
-●Python Documentation: https://docs.python.org/3/
-●Docker Documentation: https://docs.docker.com/
+print(results)<br>
+Include screenshots of your application interface, database schema, and other relevant visuals in this section.<br>
+Result<br>
+The "Online Lab Exam" system was tested with a group of students and instructors to evaluate its performance. The results demonstrated significant improvements in efficiency and accuracy compared to the traditional system. <br>
+Key findings include:<br>
+●Time Savings: Automated processes reduced the overall time required for exam management and grading by 50%.<br>
+●Accuracy: Automated grading ensured consistent and accurate evaluation, reducing grading errors by 90%.<br>
+●User Satisfaction: Both students and instructors reported high levels of satisfaction with the user-friendly interface and overall system performance.<br>
+Output<br>
+The output of the "Online Lab Exam" system includes:<br>
+●Student Submissions: Securely stored in the database and accessible by instructors.<br>
+●Grading Results: Automatically generated and displayed in the system interface.<br>
+●Reports: Detailed reports on student performance, exam statistics, and system usage.<br>
+Conclusion<br>
+The "Online Lab Exam" project successfully addresses the challenges of traditional lab examinations by providing a comprehensive digital solution. The system enhances efficiency, accuracy, and user experience, making the examination process smoother and more reliable. With its robust design and advanced features, the "Online Lab Exam" system is a valuable tool for educational institutions.<br>
+Future Scope<br>
+Future enhancements for the "Online Lab Exam" system could include:<br>
+●Enhanced Security Features: Implementing biometric authentication and advanced encryption methods.<br>
+●Integration with Learning Management Systems (LMS): Seamless integration with popular LMS platforms for streamlined management.<br>
+●Advanced Analytics: Providing deeper insights into student performance and exam trends using machine learning.<br>
+●Mobile Application: Developing a mobile app to increase accessibility and convenience for users.<br>
+References<br>
+Include all sources, tools, and libraries used in the project.<br>
+●Documentation for Express.js: https://expressjs.com/<br>
+●Mongoose Documentation: https://mongoosejs.com/<br>
+●Node.js Documentation: https://nodejs.org/en/docs/<br>
+●Python Documentation: https://docs.python.org/3/<br>
+●Docker Documentation: https://docs.docker.com/<br><br>
 
 This concludes the detailed documentation for the "Online Lab Exam" project. If you have any specific details or additional information to include, please let me know!
